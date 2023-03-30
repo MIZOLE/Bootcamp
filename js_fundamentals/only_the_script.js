@@ -31,7 +31,7 @@
 // } else if (num1 != num2){
 //     console.log("true")
 // }
-//swap two variables
+//swap two variables-0
 
 // let a = 1
 // let b = 2

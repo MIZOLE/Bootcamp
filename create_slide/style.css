@@ -1,0 +1,38 @@
+h3 {
+    text-align: center;
+}
+
+.slider {
+    padding: 20px;
+    background-color: blanchedalmond;
+    position: relative;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.slide-image {
+    width: 100px;
+    min-height: 200px;
+    height: auto;
+    max-height: 400px;
+    position: absolute;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    font-size: 80%;
+    background-color: azure;
+    border: solid burlywood;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.backward {
+    right: 0px;
+}

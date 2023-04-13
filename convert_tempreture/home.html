@@ -5,18 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container"style="background-image: url(weather.jpg); background-repeat: no-repeat; background-position: center;">
-
+    <h1 id="typo"></h1>
+    <br>
+    <br>
+    <div class="container"style="background-image: url(weather.jpg); background-repeat: no-repeat; background-position: center;" width="200px" height="200px">
         <h1 id="show">What should I wear today?</h1>
-        <input type="number" id="inpu" value="">
-
-        <button onclick="FtoC()" id="button">Check</button>
-    </div>
+        <h5><input class="insert" type="text" id="inpu" value="" placeholder="Insert Fahrenheit   ">
+            <!-- <input type="file" name="" id=""> -->
+            <button onclick="FtoC()" id="button">Check</button>
+            <div id="error1" style="color: red
+            ;"></div>
+                   </h5>
+        
+    </div>  
+    
 </body>
 <script src="convert.js"></script>
 

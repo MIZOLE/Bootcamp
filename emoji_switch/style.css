@@ -16,9 +16,9 @@
 
 
  @keyframes mymove {
-    from {background-color: #A0E7E5;}
-    to {background-color: #FFAEBC;}
-    from{background-color: #FBE7C6;}
+    from {background-color: #1C2143;}
+    to {background-color: #5DCAD1;}
+    from{background-color: #71F8FF;}
     from{background-color: #E4DFAF;}
  }
 
@@ -31,13 +31,13 @@
 
 .close {
     display: none;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
 }
 
 .open {
     display: none;
-    width: 500px;
+    width: 550px;
     height: 500px;
 }
 

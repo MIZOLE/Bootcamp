@@ -2,20 +2,23 @@ h3 {
     text-align: center;
 }
 
-.slider {
+/* .slider {
     padding: 20px;
     background-color: blanchedalmond;
     position: relative;
     margin: 40px auto;
     max-width: 600px;
-}
+} */
 
 .slide-image {
-    width: 100px;
-    min-height: 200px;
-    height: auto;
-    max-height: 400px;
-    position: absolute;
+    /* position: absolute; */
+    text-align: center;
+    align-content: center;
+    width: 500px;
+    height: 500px;    
+}
+
+h1 {
     text-align: center;
 }
 
@@ -29,10 +32,13 @@ p {
     font-size: 80%;
     background-color: azure;
     border: solid burlywood;
-    padding: 5px;
     cursor: pointer;
 }
 
 .backward {
     right: 0px;
+}
+
+body {
+    background-color: #87ACA3;
 }

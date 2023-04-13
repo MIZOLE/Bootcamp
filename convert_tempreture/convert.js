@@ -1,44 +1,35 @@
 //Convert fehrentits
 function FtoC() {
-
    let input = document.getElementById("inpu").value
-
-   let btn = document.getElementById("button")
 
    let F = (input - 32) * 5 / 9
 
-   if (F <= 0) {
-      alert("It is colder than the north pole!")
+   if (F < 0 ){
+      document.getElementById("error1").innerHTML = F + " It is way too cold"
+   } else if(F === " "){
+      document.getElementById("error1").innerHTML = F + " Please enter a number"
    }
-   else if (F < 16) {
-      alert("It is cold")
-   } else if (F >= 16 && F <= 21) {
-      alert(" it is warm")
-   } else {
-      alert("It is too hot, please wear shorts")
+    else if(F < 16){
+      document.getElementById("error1").innerHTML = F + " it's cold"
+   } 
+   else if (F > 16 & F <= 21){
+      document.getElementById("error1").innerHTML = F + " It is warm you can wer t-shirts"
+   } else if (F >= 21 && F <= 56){
+      document.getElementById("error1").innerHTML = F + " it is way too hot   "
    }
 
 }
 
+var i=0;
+text = "Let's convert Fahrenheit to Celcias";
 
+function typing(){
+  if(i<text.length){
+    document.getElementById("typo").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing,90);
+  }
+}
 
-// FtoC()
-// console.log(""FtoC(21) + "" )
-// function Cal_Age(born_year) {
-
-//    let get_age = 2023 - born_year;
-
-//    if (get_age < 0) { //it should not be a negetaive number
-//       console.log(get_age)
-//    } else if (!get_age) { //if it's not
-//       console.log("Enter your born year")
-//    } else if (get_age) {
-//       console.log(get_age) //to calculate my age
-//    }
-// }
-
-// // return year_was_born
-// Cal_Age(2024)
-//multipply by 5
-//sum the two values = 
-
+typing();
+   

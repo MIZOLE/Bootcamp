@@ -3,30 +3,27 @@ let list1 = document.getElementById("list")
 // let imageNumber = document.querySelector(".slide-image-number");
 // let totalImageNumber = document.querySelector(".total-image-number");
 
-
-
-
-let Myimages;
-
-
-if (localStorage.getItem('Myimages')) {
-    JSON.parse(localStorage.getItem('Myimages'))
-} else {
-    Myimages =[
-        "girl_hat.jpg",
-        "LAP.jpg",
-        "Ai.jpg",]
-}
-
-
-function remove_picture() {
-    Myimages = [];
-}
-
-function show_list() {
-    document.getElementsByClassName("list").innerHTML = Myimages[currentImage];
-}
 let currentImage = 0;
+
+let Myimages = [
+    "girl_hat.jpg",
+    "LAP.jpg",
+    "Ai.jpg"
+]
+
+if (sessionStorage.getItem("check")) {
+    Myimages = JSON.parse(sessionStorage.getItem("check"))
+} else {
+    Myimages
+}
+
+// function remove_picture() {
+//     Myimages = [];
+// }
+
+// function show_list() {
+//     document.getElementsByClassName("list").innerHTML = Myimages[currentImage];
+//}
 
 function nextImage() {
     if (image[currentImage]) {
@@ -51,29 +48,24 @@ function prevImage() {
     }
     image.src = Myimages[currentImage];
 }
-let new_image = document.getElementById("picture1").value
-
 
 function push_images() {
+    let new_image = document.getElementById("picture2").value
+    //pushing my new array to the old array and doing validation using if statement
+    if (!Myimages.includes(new_image)) {
+        Myimages.push(new_image)
+    } else if (!new_image) {
+        alert("Please insert a picture")
+    } else {
+        alert("This image already exists")
+    }
 
-    Myimages.push(new_image)
+    //add my array to local storage and convert my array to a string
+    sessionStorage.setItem("check", JSON.stringify(Myimages))
 
-    // //convert array to string using JSON
-    // let converted_aaray = JSON.stringify(Myimages);
+    //the window to reload after submision 
+    window.location.reload()
 
-    // //save to local storage
-    // sessionStorage.setItem('new_array', converted_aaray);
-
-    // //get the JSON string from local storage
-    // let STR = sessionStorage.getItem('new_array');
-
-    // //convert JSON string to relevant object
-    // let new_array = []
-
-    // new_array.push(STR)
-    // console.log(new_array)
-
-    // if (new_array[currentImage]) {
-    //     document.getElementsByClassName("slide-image").innerHTML = new_array;
-    //  }
 }
+
+

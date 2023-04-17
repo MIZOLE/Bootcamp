@@ -18,6 +18,10 @@ h3 {
     height: 500px;    
 }
 
+h3 {
+    font-size: medium;
+}
+
 h1 {
     text-align: center;
 }
